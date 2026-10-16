@@ -1,0 +1,14 @@
+LEVEL FITNESS FINANZAS — aplicación web privada
+
+1. Crea un proyecto en https://supabase.com (no usa Google).
+2. En Authentication > Providers > Email, desactiva el registro público de usuarios (Allow new users to sign up).
+3. En Authentication > Users, crea/invita tu única cuenta de propietario. Configura una contraseña segura.
+4. Abre schema.sql, sustituye propietario@ejemplo.com por el correo de esa cuenta en las cuatro políticas.
+5. Ejecuta schema.sql en SQL Editor del proyecto.
+6. Publica index.html en un hosting HTTPS estático (por ejemplo Netlify o GitHub Pages). No publiques la contraseña ni claves privadas.
+7. Abre la web, introduce la URL de Supabase y la clave pública anon/publishable en la pantalla de conexión.
+8. Inicia sesión con el correo y contraseña del propietario. Los movimientos quedan en Supabase, sincronizados entre dispositivos tras actualizar la página.
+
+IMPORTANTE: Esta es una primera versión de gestión, no contabilidad fiscal formal. Los ingresos en bolívares se valoran con tasa introducida; las conversiones USDT se guardan como movimiento aparte, no gasto. El resultado no considera inventario, devengo, impuestos ni valoración contable de criptoactivos. Exporta CSV periódicamente como respaldo.
+
+Nunca uses la clave service_role en el navegador. Comprueba que las políticas RLS están activadas antes de cargar datos reales. El archivo HTML depende de conexión a Internet para cargar sus bibliotecas.
